@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import api from '../services/api';
+import Link from 'next/link';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -44,7 +45,7 @@ export default function Login() {
       </form>
       {erro && <p style={{ color: 'red' }}>{erro}</p>}
       <p>
-        Não tem conta? <a href="/register">Cadastre-se</a>
+      Não tem conta? <Link href="/register">Cadastre-se</Link>
       </p>
     </div>
   );
